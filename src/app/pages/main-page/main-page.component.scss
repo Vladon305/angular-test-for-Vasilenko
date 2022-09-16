@@ -1,0 +1,15 @@
+.table {
+  @apply w-full rounded-md border border-black;
+
+  .table-inner {
+    @apply border-b border-black p-4 mt-6;
+
+    .coloms-titles {
+      @apply grid grid-cols-2 border-b border-black;
+
+      .field {
+        @apply flex justify-center items-center p-2 font-bold;
+      }
+    }
+  }
+}

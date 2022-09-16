@@ -1,0 +1,34 @@
+<div class="tabs">
+  <a
+    class="tab"
+    routerLink="/navigator"
+    [queryParams]="{ tab: 0 }"
+    routerLinkActive="tab-active"
+    (click)="onFilterByIncome()"
+    >InCome</a
+  >
+  <a
+    class="tab"
+    routerLink="/navigator"
+    [queryParams]="{ tab: 1 }"
+    routerLinkActive="tab-active"
+    (click)="onFilterByOutcome()"
+    >OutCome</a
+  >
+  <a
+    class="tab"
+    routerLink="/navigator"
+    [queryParams]="{ tab: 2 }"
+    routerLinkActive="tab-active"
+    (click)="onFilterByLoan()"
+    >Loans</a
+  >
+  <a
+    class="tab"
+    routerLink="/navigator"
+    [queryParams]="{ tab: 3 }"
+    routerLinkActive="tab-active"
+    (click)="onFilterByInvestment()"
+    >Investments</a
+  >
+</div>
