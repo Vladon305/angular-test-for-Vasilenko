@@ -1,0 +1,36 @@
+<div class="page">
+  <div class="header">
+    <app-card
+      [title]="'Welcome'"
+      [text]="
+        'With supporting text below as a natural dead-in to additional content'
+      "
+      [tabNumber]="0"
+    ></app-card>
+    <div class="description">
+      You have a {{ (rows$ | async)?.length }} transactions
+    </div>
+  </div>
+  <div class="cards">
+    <app-card
+      [quantity]="incomeRows.length"
+      [type]="'income'"
+      [tabNumber]="0"
+    ></app-card>
+    <app-card
+      [quantity]="investmentRows.length"
+      [type]="'investment'"
+      [tabNumber]="3"
+    ></app-card>
+    <app-card
+      [quantity]="outcomeRows.length"
+      [type]="'outcome'"
+      [tabNumber]="1"
+    ></app-card>
+    <app-card
+      [quantity]="loanRows.length"
+      [type]="'loan'"
+      [tabNumber]="2"
+    ></app-card>
+  </div>
+</div>

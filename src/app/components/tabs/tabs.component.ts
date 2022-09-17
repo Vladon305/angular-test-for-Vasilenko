@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
+import { ActivatedRoute } from '@angular/router';
 import { UsersState } from 'src/app/reducers/users/initialState';
 import {
   UsersFilterByIncomeAction,
@@ -14,10 +15,30 @@ import {
   styleUrls: ['./tabs.component.scss'],
 })
 export class TabsComponent implements OnInit {
-  constructor(private store$: Store<UsersState>) {}
+  constructor(
+    private store$: Store<UsersState>,
+    private router: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
     this.onFilterByIncome();
+    this.router.queryParams.subscribe((params) => {
+      const param = params['tab'];
+      console.log(param);
+
+      if (param === '0') {
+        this.onFilterByIncome();
+      }
+      if (param === '1') {
+        this.onFilterByOutcome();
+      }
+      if (param === '2') {
+        this.onFilterByLoan();
+      }
+      if (param === '3') {
+        this.onFilterByInvestment();
+      }
+    });
   }
 
   onFilterByIncome() {

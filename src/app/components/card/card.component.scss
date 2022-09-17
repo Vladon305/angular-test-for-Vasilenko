@@ -1,0 +1,35 @@
+.card {
+  @apply flex flex-col p-5 border border-black bg-white rounded-md;
+
+  .title {
+    @apply flex justify-center text-xl font-bold;
+  }
+
+  .title-quantity {
+    @apply flex justify-start text-xl font-bold;
+  }
+
+  .text {
+    @apply flex justify-start mb-3;
+  }
+
+  .text-description {
+    @apply mb-3 text-center;
+  }
+
+  .button-div {
+    @apply text-white;
+
+    button {
+      @apply w-36 p-2 text-center bg-blue-600 rounded-md;
+    }
+  }
+
+  .button-description-div {
+    @apply justify-self-center text-white text-center;
+
+    button {
+      @apply w-36 p-2 bg-blue-600 rounded-md;
+    }
+  }
+}

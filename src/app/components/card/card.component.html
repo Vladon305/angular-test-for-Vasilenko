@@ -1,0 +1,24 @@
+<div class="card">
+  <div
+    [ngClass]="{
+      title: !quantity,
+      'title-quantity': quantity
+    }"
+  >
+    {{ title ? title : quantity }}
+  </div>
+  <div class="text" *ngIf="type === 'income'">Income</div>
+  <div class="text" *ngIf="type === 'outcome'">Outcome</div>
+  <div class="text" *ngIf="type === 'loan'">Loans</div>
+  <div class="text" *ngIf="type === 'investment'">Investments</div>
+  <div class="text-description" *ngIf="text">{{ text }}</div>
+  <div
+    [ngClass]="{
+      'button-div': !text,
+      'button-description-div': text
+    }"
+    (click)="goToTab()"
+  >
+    <button>{{ type ? "See all" : "See transactions" }}</button>
+  </div>
+</div>

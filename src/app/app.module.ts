@@ -12,6 +12,8 @@ import { environment } from '../environments/environment';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { TabsComponent } from './components/tabs/tabs.component';
+import { DashboardPageComponent } from './pages/dashboard-page/dashboard-page.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { TabsComponent } from './components/tabs/tabs.component';
     UserRowComponent,
     MainPageComponent,
     TabsComponent,
+    DashboardPageComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,

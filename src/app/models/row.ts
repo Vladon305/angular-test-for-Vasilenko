@@ -3,7 +3,7 @@ interface IName {
   last: string;
 }
 
-export interface IUser {
+export interface IRow {
   _id: string;
   amount: number;
   type: 'income' | 'outcome' | 'loan' | 'investment';

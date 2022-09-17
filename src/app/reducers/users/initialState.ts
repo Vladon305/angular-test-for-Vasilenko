@@ -1,8 +1,8 @@
-import { IUser } from 'src/app/models/user';
+import { IRow } from 'src/app/models/row';
 
 export interface UsersState {
-  users: IUser[];
-  filteredUsers: IUser[];
+  users: IRow[];
+  filteredUsers: IRow[];
 }
 
 export const initialState: UsersState = {

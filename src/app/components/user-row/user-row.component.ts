@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IUser } from 'src/app/models/user';
+import { IRow } from 'src/app/models/row';
 
 @Component({
   selector: 'app-user-row',
@@ -7,5 +7,5 @@ import { IUser } from 'src/app/models/user';
   styleUrls: ['./user-row.component.scss'],
 })
 export class UserRowComponent {
-  @Input() user: IUser;
+  @Input() user: IRow;
 }
