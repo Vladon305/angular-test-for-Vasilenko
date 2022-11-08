@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { IRow } from 'src/app/models/row';
-import { UsersState } from 'src/app/reducers/users/initialState';
-import { selectUsers } from 'src/app/reducers/users/users.selectors';
+import { RowsState } from 'src/app/reducers/rows/initialState';
+import { selectRows } from 'src/app/reducers/rows/rows.selectors';
 
 @Component({
   selector: 'app-dashboard-page',
@@ -11,9 +11,9 @@ import { selectUsers } from 'src/app/reducers/users/users.selectors';
   styleUrls: ['./dashboard-page.component.scss'],
 })
 export class DashboardPageComponent implements OnInit {
-  constructor(private store$: Store<UsersState>) {}
+  constructor(private store$: Store<RowsState>) {}
 
-  rows$: Observable<IRow[]> = this.store$.pipe(select(selectUsers));
+  rows$: Observable<IRow[]> = this.store$.pipe(select(selectRows));
   incomeRows: IRow[];
   outcomeRows: IRow[];
   loanRows: IRow[];

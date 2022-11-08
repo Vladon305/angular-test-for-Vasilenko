@@ -8,11 +8,11 @@ const routes: Routes = [
     path: '',
     component: DashboardPageComponent,
   },
-  // {
-  //   path: '**',
-  //   redirectTo: '',
-  //   pathMatch: 'full',
-  // },
+  {
+    path: '**',
+    redirectTo: '',
+    pathMatch: 'full',
+  },
   {
     path: 'navigator',
     component: MainPageComponent,

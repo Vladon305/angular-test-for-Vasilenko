@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UserRowComponent } from './components/user-row/user-row.component';
+import { RowComponent } from './components/row/row.component';
 import { MainPageComponent } from './pages/main-page/main-page.component';
 import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './reducers/index';
@@ -18,7 +18,7 @@ import { CardComponent } from './components/card/card.component';
 @NgModule({
   declarations: [
     AppComponent,
-    UserRowComponent,
+    RowComponent,
     MainPageComponent,
     TabsComponent,
     DashboardPageComponent,

@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { ActivatedRoute } from '@angular/router';
-import { UsersState } from 'src/app/reducers/users/initialState';
+import { RowsState } from 'src/app/reducers/rows/initialState';
 import {
-  UsersFilterByIncomeAction,
-  UsersFilterByLoanAction,
-  UsersFilterByOutcomeAction,
-  UsersFilterInvestmentAction,
-} from 'src/app/reducers/users/users.actions';
+  rowsFilterByIncomeAction,
+  rowsFilterByOutcomeAction,
+  rowsFilterByLoanAction,
+  rowsFilterInvestmentAction,
+} from 'src/app/reducers/rows/rows.actions';
 
 @Component({
   selector: 'app-tabs',
@@ -16,7 +16,7 @@ import {
 })
 export class TabsComponent implements OnInit {
   constructor(
-    private store$: Store<UsersState>,
+    private store$: Store<RowsState>,
     private router: ActivatedRoute
   ) {}
 
@@ -24,8 +24,6 @@ export class TabsComponent implements OnInit {
     this.onFilterByIncome();
     this.router.queryParams.subscribe((params) => {
       const param = params['tab'];
-      console.log(param);
-
       if (param === '0') {
         this.onFilterByIncome();
       }
@@ -42,18 +40,18 @@ export class TabsComponent implements OnInit {
   }
 
   onFilterByIncome() {
-    this.store$.dispatch(new UsersFilterByIncomeAction());
+    this.store$.dispatch(new rowsFilterByIncomeAction());
   }
 
   onFilterByOutcome() {
-    this.store$.dispatch(new UsersFilterByOutcomeAction());
+    this.store$.dispatch(new rowsFilterByOutcomeAction());
   }
 
   onFilterByLoan() {
-    this.store$.dispatch(new UsersFilterByLoanAction());
+    this.store$.dispatch(new rowsFilterByLoanAction());
   }
 
   onFilterByInvestment() {
-    this.store$.dispatch(new UsersFilterInvestmentAction());
+    this.store$.dispatch(new rowsFilterInvestmentAction());
   }
 }

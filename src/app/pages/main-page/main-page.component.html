@@ -5,8 +5,8 @@
       <div class="field">Name</div>
       <div class="field">Amount</div>
     </div>
-    <div *ngFor="let user of filteredUsers$ | async">
-      <app-user-row [user]="user" class="last:border-0"></app-user-row>
+    <div *ngFor="let row of filteredRows$ | async">
+      <app-row [row]="row" class="last:border-0"></app-row>
     </div>
   </div>
 </div>

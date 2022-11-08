@@ -1,12 +1,12 @@
 import { IRow } from 'src/app/models/row';
 
-export interface UsersState {
-  users: IRow[];
-  filteredUsers: IRow[];
+export interface RowsState {
+  rows: IRow[];
+  filteredRows: IRow[];
 }
 
-export const initialState: UsersState = {
-  users: [
+export const initialState: RowsState = {
+  rows: [
     {
       _id: '5d99beb677015a5c2c14542e',
       amount: Math.floor(Math.random() * (100000 - 1 + 1)) + 1,
@@ -1310,5 +1310,5 @@ export const initialState: UsersState = {
       address: '547 Ebony Court, Rivera, Minnesota, 915',
     },
   ],
-  filteredUsers: [],
+  filteredRows: [],
 };
